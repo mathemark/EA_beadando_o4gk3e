@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ea_beadando_o4gk3e;
+package eloadasok.Model;
 
 /**
  *
@@ -14,7 +14,13 @@ public class EA_Beadando_O4GK3E {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+     
+       Konferalok konf = new Konferalok();
+       System.out.println(konf.getNev());
+       Eloadok eloadok = new Eloadok("Peter","Fogászat",24);
+       System.out.println(eloadok.getNev() + eloadok.getTema() + eloadok.getIdo());
+       
+
     }
-    
+
 }
