@@ -4,23 +4,22 @@
  */
 package eloadasok.Model;
 
+import java.awt.List;
+import java.util.ArrayList;
+
 /**
  *
  * @author markmathe
  */
 public class EA_Beadando_O4GK3E {
-
+        
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-     
-       Konferalok konf = new Konferalok();
-       System.out.println(konf.getNev());
-       Eloadok eloadok = new Eloadok("Peter","Fogászat",24);
-       System.out.println(eloadok.getNev() + eloadok.getTema() + eloadok.getIdo());
-       
+        
+        Listazo listazo = new Listazo();
+        
 
     }
-
-}
+    }
