@@ -14,7 +14,7 @@ import java.util.Objects;
  * @author markmathe
  */
 
-class EloadokComparator implements Comparator<Eloadok>{
+class EloadokComparator implements Comparator<Eloadok>, Runnable{
 
     @Override
     public int compare(Eloadok egyik, Eloadok masik) {
@@ -22,6 +22,11 @@ class EloadokComparator implements Comparator<Eloadok>{
         Collator col = Collator.getInstance();
         return col.compare(egyik.getNev(), masik.getNev());
     } 
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
 
 class TemaComparator implements Comparator<Eloadok>{
@@ -79,6 +84,9 @@ public class Eloadok implements Comparable<Eloadok> {
 
     public void setTema(String tema) {
         this.tema = tema;
+    }
+    public void setNev(String nev) {
+        this.nev = nev;
     }
 
     public String getPerc() {

@@ -14,36 +14,36 @@
         <URL value="@eloadasokfxml.css" />
     </stylesheets>
    <children>
-      <TextField fx:id="nevTextEdit" layoutX="38.0" layoutY="499.0" promptText="Teljes név" stylesheets="@eloadasokfxml.css" />
+      <TextField fx:id="nevText" layoutX="38.0" layoutY="58.0" promptText="Teljes név" stylesheets="@eloadasokfxml.css" />
       <TextField fx:id="eloadasText" layoutX="38.0" layoutY="108.0" promptText="Előadás címe" stylesheets="@eloadasokfxml.css" />
+      <TextField fx:id="idoText" layoutX="40.0" layoutY="160.0" prefHeight="25.0" prefWidth="41.0" promptText="perc" stylesheets="@eloadasokfxml.css" />
       <Label layoutX="38.0" layoutY="41.0" stylesheets="@eloadasokfxml.css" text="Előadó neve" />
       <Label layoutX="38.0" layoutY="91.0" stylesheets="@eloadasokfxml.css" text="Előadás neve" />
       <Label layoutX="40.0" layoutY="143.0" stylesheets="@eloadasokfxml.css" text="Előadás hossza" />
-      <TextField fx:id="idoText" layoutX="40.0" layoutY="160.0" prefHeight="25.0" prefWidth="41.0" promptText="perc" stylesheets="@eloadasokfxml.css" />
-      <TableView layoutX="250.0" layoutY="42.0" prefHeight="399.0" prefWidth="564.0" stylesheets="@eloadasokfxml.css">
+      <TableView fx:id="tableview" layoutX="250.0" layoutY="42.0" prefHeight="399.0" prefWidth="565.0" stylesheets="@eloadasokfxml.css">
         <columns>
-          <TableColumn editable="false" prefWidth="163.0" text="Előadó neve" />
-          <TableColumn prefWidth="243.0" text="Előadás témája" />
-            <TableColumn minWidth="0.0" prefWidth="157.0" text="Előadás ideje" />
+          <TableColumn fx:id="nev" editable="false" prefWidth="163.0" resizable="false" text="Előadó neve" />
+          <TableColumn fx:id="tema" editable="false" prefWidth="243.0" resizable="false" text="Előadás témája" />
+            <TableColumn fx:id="perc" editable="false" minWidth="0.0" prefWidth="157.0" text="Előadás ideje" />
         </columns>
       </TableView>
-      <Button fx:id="eloadoButton" layoutX="124.0" layoutY="207.0" mnemonicParsing="false" onAction="#enterEloadoData" prefHeight="25.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Enter" />
-      <Button fx:id="cancelButton" layoutX="222.0" layoutY="549.0" mnemonicParsing="false" onAction="#clearBotom" prefHeight="25.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Cancel" />
-      <Button fx:id="konferButton" layoutX="37.0" layoutY="274.0" mnemonicParsing="false" onAction="#enterKonferData" prefHeight="25.0" prefWidth="161.0" stylesheets="@eloadasokfxml.css" text="Enter" />
-      <Label layoutX="37.0" layoutY="251.0" prefHeight="17.0" prefWidth="131.0" stylesheets="@eloadasokfxml.css" text="Konferáló integrálása" />
-      <Button fx:id="redezveny" layoutX="708.0" layoutY="496.0" mnemonicParsing="false" onAction="#rendezveny" prefHeight="32.0" prefWidth="105.0" stylesheets="@eloadasokfxml.css" text="Rendezvény" />
+      <Button fx:id="eloadoButton" layoutX="124.0" layoutY="207.0" mnemonicParsing="false" onAction="#enterEloadoData" prefHeight="28.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Enter" />
+      <Button fx:id="cancelButton1" layoutX="38.0" layoutY="207.0" mnemonicParsing="false" onAction="#clearTop" prefHeight="25.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Cancel" />
+      <Button fx:id="konferButton" layoutX="37.0" layoutY="325.0" mnemonicParsing="false" onAction="#enterKonferData" prefHeight="25.0" prefWidth="161.0" stylesheets="@eloadasokfxml.css" text="Enter" />
+      <TextField fx:id="nevTextEdit" layoutX="37.0" layoutY="500.0" promptText="Teljes név" />
+      <TextField fx:id="eloadasTextEdit" layoutX="222.0" layoutY="501.0" promptText="Előadás neve" />
+      <TextField fx:id="idoTextEdit" layoutX="38.0" layoutY="551.0" prefHeight="26.0" prefWidth="46.0" promptText="perc" />
+      <Label layoutX="37.0" layoutY="300.0" prefHeight="17.0" prefWidth="131.0" stylesheets="@eloadasokfxml.css" text="Konferáló integrálása" />
+      <Button fx:id="redezveny" layoutX="657.0" layoutY="500.0" mnemonicParsing="false" onAction="#rendezveny" prefHeight="68.0" prefWidth="131.0" stylesheets="@eloadasokfxml.css" text="Rendezvény" />
       <Label layoutX="38.0" layoutY="476.0" stylesheets="@eloadasokfxml.css" text="Előadó neve" />
       <Label layoutX="37.0" layoutY="442.0" stylesheets="@eloadasokfxml.css" text="Edit">
          <font>
             <Font size="28.0" />
          </font>
       </Label>
-      <TextField fx:id="nameText" layoutX="38.0" layoutY="58.0" promptText="Teljes név" stylesheets="@eloadasokfxml.css" />
       <Label layoutX="222.0" layoutY="476.0" stylesheets="@eloadasokfxml.css" text="Előadás neve" />
-      <TextField fx:id="eloadasTextEdit" layoutX="222.0" layoutY="499.0" promptText="Előadás címe" stylesheets="@eloadasokfxml.css" />
       <Label layoutX="38.0" layoutY="533.0" stylesheets="@eloadasokfxml.css" text="Előadás hossza" />
-      <TextField fx:id="idoTextEdit" layoutX="39.0" layoutY="550.0" prefHeight="25.0" prefWidth="41.0" promptText="perc" stylesheets="@eloadasokfxml.css" />
-      <Button fx:id="eloadoButton1" layoutX="309.0" layoutY="549.0" mnemonicParsing="false" onAction="#enterEloadoData" prefHeight="28.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Enter" />
-      <Button fx:id="cancelButton1" layoutX="38.0" layoutY="207.0" mnemonicParsing="false" onAction="#clearTop" prefHeight="25.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Cancel" />
+      <Button fx:id="eloadoEditButton" layoutX="309.0" layoutY="549.0" mnemonicParsing="false" onAction="#editEloadoData" prefHeight="28.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Enter" />
+      <Button fx:id="cancelButton" layoutX="222.0" layoutY="549.0" mnemonicParsing="false" onAction="#clearEditData" prefHeight="25.0" prefWidth="73.0" stylesheets="@eloadasokfxml.css" text="Cancel" />
    </children>
 </AnchorPane>

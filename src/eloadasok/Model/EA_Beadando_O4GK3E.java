@@ -11,19 +11,19 @@ import java.util.ArrayList;
  *
  * @author markmathe
  */
-public class EA_Beadando_O4GK3E {
-        
+public class EA_Beadando_O4GK3E extends Thread{
+
     /**
      * @param args the command line arguments
      */
     static String eloadokTxt = "src/rsc/Eloadok.txt";
     private String eloadasTxt = "src/rsc/Eloadas.txt";
-    
+
     public static void main(String[] args) {
         Listazo l = new Listazo();
-        
-        Eloadok e = new Eloadok("Aladár", "Vendetta","20");
-        Eloadok c = new Eloadok("Béla", "Csíra","3333");
+
+        Eloadok e = new Eloadok("Aladár", "Vendetta", "20");
+        Eloadok c = new Eloadok("Béla", "Csíra", "3333");
         Eloadok k = new Konferalok();
         //l.beírEloadok(e.toString() + "\n");
         //l.beírEloadok(k.toString() + "\n");
@@ -31,26 +31,32 @@ public class EA_Beadando_O4GK3E {
 //        l.beírEloadok(k.toString() + "\n");
         l.beolvas(eloadokTxt);
         l.feltolt();
+        Thread t1 = new Thread(new Runnable(){public void run(){l.hashKi();
+        System.out.println("------------->");}});
+        t1.start();
         
-        l.hashKi();
+        Thread t2 = new Thread(new Runnable(){public void run(){l.sorByTheme();
+        l.felülírEloadok();}});
+        t2.start();
         
-        System.out.println("------------->");
-        l.treeKi();
-        System.out.println("------------->");
-        l.sorByName();
-        l.felülírEloadok();
-        System.out.println("------------->");
-        l.sorByTheme();
-        System.out.println("------------->");
-        l.sorByTime();
-        System.out.println("------------->");
-        l.beolvas(eloadokTxt);
-        l.feltolt();
-        l.kiir();
-        System.out.println("------------->");
-        Eloadok g = new Eloadok("Béla","Samsonite","21");
-        l.sorFelülírEloadok(g);
-        l.felülírEloadok();
-        l.kiir();
+
+//        System.out.println("------------->");
+//        l.treeKi();
+//        System.out.println("------------->");
+//        l.sorByName();
+//        l.felülírEloadok();
+//        System.out.println("------------->");
+//        l.sorByTheme();
+//        System.out.println("------------->");
+//        l.sorByTime();
+//        System.out.println("------------->");
+//        l.beolvas(eloadokTxt);
+//        l.feltolt();
+//        l.kiir();
+//        System.out.println("------------->");
+//        Eloadok g = new Eloadok("Béla","Samsonite","21");
+//        l.sorFelülírEloadok(g);
+//        l.felülírEloadok();
+//        l.kiir();
     }
-    }
+}
