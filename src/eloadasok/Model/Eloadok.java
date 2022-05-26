@@ -13,7 +13,36 @@ import java.util.Objects;
  *
  * @author markmathe
  */
-public class Eloadok implements Comparator<Eloadok> {
+
+class EloadokComparator implements Comparator<Eloadok>{
+
+    @Override
+    public int compare(Eloadok egyik, Eloadok masik) {
+        
+        Collator col = Collator.getInstance();
+        return col.compare(egyik.getNev(), masik.getNev());
+    } 
+}
+
+class TemaComparator implements Comparator<Eloadok>{
+
+    @Override
+    public int compare(Eloadok egyik, Eloadok masik) {
+        
+        Collator col = Collator.getInstance();
+        return col.compare(egyik.getTema(), masik.getTema());
+    } 
+}
+class IdoComparator implements Comparator<Eloadok>{
+
+    @Override
+    public int compare(Eloadok egyik, Eloadok masik) {
+        
+        Collator col = Collator.getInstance();
+        return col.compare(egyik.getPerc(), masik.getPerc());
+    } 
+}
+public class Eloadok implements Comparable<Eloadok> {
 
     private String nev;
     private String tema;
@@ -30,15 +59,15 @@ public class Eloadok implements Comparator<Eloadok> {
         perc = s[2].trim();
     }
 
-    public Eloadok() {
-    }
+    public Eloadok() {}
 
-
+    @Override
     public int compareTo(Eloadok that) {
         
         Collator col = Collator.getInstance();
-        return col.compare(this.nev, that.nev);
+        return col.compare(this.perc, that.perc);
     }
+    
 
     public String getNev() {
         return nev;
@@ -93,17 +122,11 @@ public class Eloadok implements Comparator<Eloadok> {
         return Objects.equals(this.perc, other.perc);
     }
 
-    @Override
-    public Comparator<Eloadok> reversed() {
-        return Comparator.super.reversed(); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/OverriddenMethodBody
-    }
 
 
 
-    @Override
-    public int compare(Eloadok o1, Eloadok o2) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+
+
     
     
 }
